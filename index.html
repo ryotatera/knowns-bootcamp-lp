@@ -99,24 +99,12 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 8px;
       text-decoration: none;
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 1.25rem;
     }
 
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--gradient-primary);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 900;
-      font-size: 1.1rem;
+    .logo svg {
+      height: 26px;
+      width: auto;
     }
 
     .header-cta {
@@ -178,7 +166,8 @@
     }
 
     .btn-icon {
-      font-size: 1.2em;
+      width: 18px;
+      height: 18px;
     }
 
     /* ========== Hero Section ========== */
@@ -306,6 +295,8 @@
 
     .hero-feature-icon {
       color: var(--accent);
+      width: 20px;
+      height: 20px;
     }
 
     .hero-cta {
@@ -478,7 +469,7 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 24px;
-      font-size: 2rem;
+      color: var(--primary);
     }
 
     .problem-card-title {
@@ -498,7 +489,6 @@
       justify-content: center;
       margin-top: 16px;
       color: var(--primary);
-      font-size: 1.5rem;
     }
 
     /* ========== Solution Section ========== */
@@ -545,7 +535,6 @@
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 1.5rem;
       margin-bottom: 20px;
     }
 
@@ -644,7 +633,6 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 24px;
-      font-size: 2.5rem;
       color: white;
       box-shadow: 0 8px 30px rgba(60, 150, 170, 0.3);
     }
@@ -922,8 +910,12 @@
     }
 
     .cycle-arrow {
-      font-size: 2rem;
       color: var(--primary);
+    }
+
+    .cycle-arrow i {
+      width: 32px;
+      height: 32px;
     }
 
     /* ========== Instructors Section ========== */
@@ -953,7 +945,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 4rem;
       color: white;
     }
 
@@ -1207,7 +1198,6 @@
       align-items: center;
       justify-content: center;
       color: var(--primary);
-      font-size: 1.25rem;
       flex-shrink: 0;
       transition: transform 0.3s ease;
     }
@@ -1316,11 +1306,20 @@
     .footer-logo {
       display: flex;
       align-items: center;
-      gap: 8px;
-      color: white;
-      font-weight: 700;
-      font-size: 1.25rem;
       margin-bottom: 16px;
+    }
+
+    .footer-logo svg {
+      height: 26px;
+      width: auto;
+    }
+
+    .footer-logo svg path:first-child {
+      fill: white;
+    }
+
+    .footer-logo svg path:not(:first-child) {
+      fill: rgba(255, 255, 255, 0.9);
     }
 
     .footer-desc {
@@ -1462,8 +1461,21 @@
   <header class="header" id="header">
     <div class="header-inner">
       <a href="#" class="logo">
-        <div class="logo-icon">K</div>
-        <span>Knowns</span>
+        <svg width="114" height="26" viewBox="0 0 114 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.7491 18.4688C18.7384 17.4573 17.1058 17.4573 16.0951 18.4688L10.2747 24.2941C9.26402 25.3056 7.63139 25.3056 6.62071 24.2941L1.45332 19.1224C0.442644 18.1109 0.442644 16.4769 1.45332 15.4654L16.0951 0.811371C17.1058 -0.200144 18.7384 -0.200144 19.7491 0.811371L27.8189 8.88794C29.7522 10.8228 32.8827 10.8228 34.8159 8.88794L38.9986 4.70181C40.0092 3.6903 41.6419 3.6903 42.6525 4.70181L47.8199 9.87351C48.8306 10.885 48.8306 12.519 47.8199 13.5305L42.891 18.4636C36.5004 24.8595 26.1397 24.8595 19.7491 18.4636V18.4688Z" fill="#3C96AA"/>
+          <path d="M59.6321 0.287109H61.8556V4.71186L65.9294 0.287109H68.6608L64.53 4.58217L68.8319 10.4075H66.1575L63.0218 6.10204L61.8505 7.31585V10.4075H59.627V0.287109H59.6321Z" fill="#231815"/>
+          <path d="M69.4067 2.65794H71.6043V3.75763C72.1122 3.10923 72.7601 2.5127 73.8744 2.5127C75.533 2.5127 76.5022 3.6124 76.5022 5.39163V10.4077H74.3046V6.08672C74.3046 5.04408 73.8122 4.50979 72.9778 4.50979C72.1433 4.50979 71.6043 5.04408 71.6043 6.08672V10.4077H69.4067V2.65794Z" fill="#231815"/>
+          <path d="M77.7412 6.57462V6.5435C77.7412 4.31816 79.5345 2.50781 81.9446 2.50781C84.3546 2.50781 86.1168 4.28703 86.1168 6.51236V6.5435C86.1168 8.76883 84.3235 10.5792 81.9135 10.5792C79.5034 10.5792 77.7412 8.79995 77.7412 6.57462ZM83.9504 6.57462V6.5435C83.9504 5.4023 83.1263 4.40633 81.9135 4.40633C80.7007 4.40633 79.9077 5.37636 79.9077 6.51755V6.54868C79.9077 7.68987 80.7318 8.68582 81.9446 8.68582C83.1574 8.68582 83.9504 7.71582 83.9504 6.57462Z" fill="#231815"/>
+          <path d="M86.5316 2.65777H88.755L89.9989 7.35742L91.4554 2.63184H93.3471L94.8191 7.37298L96.0889 2.65777H98.2709L95.8609 10.4646H93.881L92.3935 5.70788L90.8749 10.4646H88.9105L86.5264 2.65777H86.5316Z" fill="#231815"/>
+          <path d="M99.3179 2.65794H101.515V3.75763C102.023 3.10923 102.671 2.5127 103.786 2.5127C105.444 2.5127 106.413 3.6124 106.413 5.39163V10.4077H104.216V6.08672C104.216 5.04408 103.723 4.50979 102.889 4.50979C102.054 4.50979 101.515 5.04408 101.515 6.08672V10.4077H99.3179V2.65794Z" fill="#231815"/>
+          <path d="M107.419 9.38039L108.357 7.93314C109.197 8.54005 110.078 8.85647 110.798 8.85647C111.436 8.85647 111.721 8.62304 111.721 8.28068V8.24956C111.721 7.77233 110.969 7.61153 110.119 7.35217C109.036 7.03575 107.807 6.52739 107.807 5.02308V4.99196C107.807 3.41503 109.077 2.5332 110.637 2.5332C111.622 2.5332 112.69 2.86519 113.524 3.4306L112.685 4.95047C111.918 4.50436 111.156 4.22943 110.591 4.22943C110.026 4.22943 109.782 4.46286 109.782 4.76372V4.79484C109.782 5.23057 110.518 5.43287 111.358 5.71817C112.441 6.08128 113.695 6.60002 113.695 8.01614V8.04726C113.695 9.76943 112.41 10.5475 110.736 10.5475C109.653 10.5475 108.44 10.1844 107.414 9.3752L107.419 9.38039Z" fill="#231815"/>
+          <path d="M60.0986 23.1271V21.8614C60.3319 21.8822 60.6843 21.8977 61.1508 21.9029C61.6172 21.9081 62.1925 21.9133 62.8663 21.9133V19.9785C62.5761 19.9785 62.3014 19.9785 62.0319 19.9888C61.7675 19.994 61.5343 19.9992 61.3373 20.0044C61.1404 20.0096 60.9901 20.02 60.8916 20.0303V18.7646C61.1041 18.7854 61.4306 18.801 61.8712 18.8061C62.3117 18.8061 62.8611 18.8165 63.5246 18.8165C64.188 18.8165 64.6959 18.8165 65.1364 18.8061C65.577 18.7958 65.8932 18.7854 66.0901 18.7698V20.0355C65.9346 20.02 65.7014 20.0096 65.3749 20.0044C65.0483 19.9992 64.6389 19.994 64.1361 19.9888V21.9237C64.7788 21.9185 65.3334 21.9133 65.7999 21.9029C66.2663 21.8926 66.5877 21.8874 66.7691 21.877V23.1427C66.3026 23.1116 65.2038 23.096 63.4727 23.096C63.1307 23.096 62.7834 23.096 62.431 23.096C62.0785 23.096 61.752 23.1012 61.441 23.1064C61.13 23.1064 60.8553 23.1116 60.6221 23.1167C60.3889 23.1219 60.2127 23.1323 60.0986 23.1427V23.1271Z" fill="#231815"/>
+          <path d="M71.4281 24.5793C71.4229 24.4756 71.4074 24.2992 71.3866 24.0554C71.3659 23.8116 71.34 23.5159 71.3089 23.1788C71.2778 22.8416 71.2415 22.4837 71.2 22.105C70.8217 22.1465 70.4537 22.1932 70.0909 22.2451C69.7281 22.2918 69.4067 22.3385 69.1165 22.38C68.8262 22.4214 68.593 22.4526 68.422 22.4837L68.2769 21.2543C68.4531 21.2387 68.6863 21.218 68.9766 21.1921C69.2668 21.1661 69.5985 21.135 69.9613 21.0987C70.3241 21.0624 70.6973 21.0209 71.0705 20.9742L70.9616 20.0561C70.5418 20.1079 70.1427 20.1546 69.7695 20.2065C69.3964 20.2584 69.1165 20.305 68.9299 20.3413L68.7796 19.112C68.9973 19.1016 69.2927 19.0757 69.6659 19.0445C70.0391 19.0134 70.4278 18.9719 70.832 18.9252C70.8061 18.6659 70.775 18.4376 70.7439 18.2405C70.7128 18.0434 70.6817 17.8722 70.6507 17.7373L71.9516 17.5869C71.9568 17.7062 71.9671 17.867 71.9827 18.0693C71.9982 18.2716 72.0189 18.5102 72.0449 18.7852C72.4543 18.7281 72.8379 18.6762 73.1903 18.6296C73.5427 18.5829 73.8174 18.5414 74.004 18.5154L74.1491 19.7448C74.0455 19.7448 73.89 19.7552 73.6878 19.7708C73.4857 19.7863 73.2473 19.8071 72.9882 19.833C72.7238 19.8589 72.4543 19.8849 72.1692 19.9212L72.2781 20.8497C72.6461 20.803 72.9985 20.7563 73.3458 20.7097C73.693 20.663 74.004 20.6215 74.2787 20.58C74.5586 20.5385 74.7763 20.5073 74.937 20.4762L75.0872 21.716C74.9629 21.7212 74.7607 21.7367 74.4809 21.7627C74.201 21.7886 73.8848 21.8197 73.5272 21.8508C73.1696 21.882 72.7964 21.9235 72.418 21.965C72.4595 22.3333 72.5061 22.6808 72.5476 23.0128C72.5891 23.3448 72.6305 23.6353 72.6668 23.8843C72.7031 24.1332 72.729 24.32 72.7549 24.4445L71.4436 24.5845L71.4281 24.5793Z" fill="#231815"/>
+          <path d="M77 24.1857C76.9016 24.0249 76.7824 23.8485 76.6476 23.6514C76.5128 23.4543 76.3625 23.2883 76.207 23.1586C76.6113 22.9822 77.0156 22.7644 77.4147 22.505C77.8138 22.2456 78.1921 21.9552 78.5601 21.6336C78.9229 21.3119 79.2598 20.9696 79.5656 20.6065C79.8714 20.2434 80.1357 19.8751 80.3534 19.4964C80.0735 19.512 79.7781 19.5327 79.4619 19.5483C79.1458 19.569 78.8348 19.5898 78.5342 19.6105C78.2336 19.6313 77.9641 19.652 77.7205 19.6728C77.4821 19.6935 77.3006 19.7091 77.1814 19.7195L77.0415 18.433C77.1814 18.4382 77.3939 18.4382 77.679 18.433C77.9641 18.4278 78.275 18.4174 78.6171 18.4019C78.9592 18.3863 79.3064 18.3708 79.6485 18.3552C79.9906 18.3345 80.3016 18.3137 80.5814 18.2878C80.8613 18.2618 81.0686 18.2359 81.2034 18.21L82.0223 18.7442C81.8876 19.1333 81.7165 19.512 81.5195 19.8803C81.3226 20.2486 81.0946 20.6065 80.8458 20.9488C81.0427 21.0993 81.25 21.2704 81.4625 21.4572C81.675 21.6439 81.8876 21.8358 82.0949 22.0278C82.3022 22.2197 82.494 22.4065 82.6702 22.588C82.8464 22.7644 82.9863 22.9252 83.0952 23.06C82.9086 23.1794 82.7324 23.3194 82.5561 23.4802C82.3851 23.641 82.2193 23.807 82.0586 23.9782C81.9187 23.7759 81.7321 23.5476 81.504 23.2935C81.276 23.0393 81.0375 22.7851 80.7888 22.5309C80.5348 22.2768 80.3016 22.0537 80.0735 21.8618C79.6174 22.3442 79.1302 22.7799 78.6015 23.1793C78.0729 23.5788 77.5443 23.9108 77.0052 24.1857H77Z" fill="#231815"/>
+          <path d="M84.614 23.1686C84.4844 23.0182 84.3237 22.8678 84.1371 22.7018C83.9505 22.5358 83.7536 22.3957 83.5566 22.2764C83.9298 22.0171 84.2615 21.7162 84.5621 21.3635C84.8575 21.0107 85.1115 20.6424 85.3188 20.2534C85.5261 19.8643 85.6661 19.4909 85.7386 19.1278L86.9618 19.5324C86.853 19.9785 86.6871 20.4297 86.4695 20.8759C86.2518 21.322 85.9874 21.7421 85.6764 22.1364C85.3655 22.5306 85.013 22.8781 84.6191 23.179L84.614 23.1686ZM89.9472 22.9456C89.8487 22.6862 89.7243 22.4113 89.5688 22.1104C89.4134 21.8096 89.2475 21.5139 89.0713 21.2182C88.8951 20.9225 88.7033 20.6528 88.5115 20.4038C88.3198 20.1548 88.1383 19.9525 87.9725 19.7917L88.9728 19.1122C89.1697 19.2937 89.3719 19.5064 89.5896 19.7502C89.8072 19.994 90.0094 20.2586 90.2115 20.5439C90.4137 20.8292 90.6003 21.1145 90.7713 21.405C90.9423 21.6955 91.0874 21.9756 91.2118 22.2453C91.0252 22.3335 90.8231 22.4372 90.5951 22.5513C90.3722 22.6707 90.1545 22.8003 89.9472 22.9404V22.9456ZM90.082 19.1381C89.8539 19.1381 89.6569 19.0551 89.4963 18.8943C89.3356 18.7335 89.2527 18.5364 89.2527 18.3082C89.2527 18.0799 89.3356 17.8932 89.4963 17.7272C89.6569 17.5664 89.8539 17.4834 90.082 17.4834C90.31 17.4834 90.4966 17.5664 90.6624 17.7272C90.8231 17.888 90.9061 18.0799 90.9061 18.3082C90.9061 18.5364 90.8231 18.7335 90.6624 18.8943C90.5018 19.0551 90.31 19.1381 90.082 19.1381ZM90.082 18.7439C90.2012 18.7439 90.3048 18.7024 90.3826 18.6142C90.4655 18.5312 90.507 18.4275 90.507 18.3082C90.507 18.1889 90.4655 18.0851 90.3826 18.0073C90.2996 17.9243 90.2012 17.8828 90.082 17.8828C89.9627 17.8828 89.8591 17.9243 89.7762 18.0073C89.6932 18.0903 89.6466 18.1889 89.6466 18.3082C89.6466 18.4275 89.6881 18.5312 89.7762 18.6142C89.8591 18.6972 89.9627 18.7439 90.082 18.7439Z" fill="#231815"/>
+          <path d="M92.4039 21.7157C92.4039 21.6171 92.4091 21.4874 92.4039 21.3318C92.4039 21.171 92.4039 21.0154 92.4039 20.8546C92.4039 20.6938 92.4039 20.5693 92.3936 20.4707C92.4713 20.4759 92.6371 20.4811 92.8911 20.4915C93.1502 20.5018 93.4612 20.507 93.8344 20.507C94.2076 20.507 94.6118 20.5122 95.042 20.5174C95.4774 20.5174 95.9128 20.5174 96.3481 20.5174C96.7835 20.5174 97.1981 20.5174 97.5817 20.5174C97.9652 20.5174 98.2969 20.507 98.5716 20.5018C98.8463 20.4966 99.0329 20.4863 99.1314 20.4707C99.1262 20.5589 99.121 20.6834 99.121 20.8442C99.121 21.005 99.121 21.1658 99.121 21.3266C99.121 21.4874 99.121 21.6119 99.121 21.7053C98.9966 21.7001 98.7997 21.6949 98.5405 21.6845C98.2762 21.6741 97.9704 21.669 97.6128 21.6638C97.2552 21.6586 96.8768 21.6534 96.4725 21.6534H95.2494C94.8399 21.6534 94.446 21.6534 94.0728 21.6638C93.6997 21.669 93.368 21.6741 93.0777 21.6845C92.7875 21.6949 92.5594 21.7053 92.3987 21.7208L92.4039 21.7157Z" fill="#231815"/>
+          <path d="M101.256 24.4912V17.7529H102.495V20.2532L102.889 19.6878C103.019 19.7812 103.195 19.9005 103.418 20.0457C103.64 20.1909 103.879 20.3362 104.133 20.4866C104.387 20.637 104.63 20.7771 104.864 20.9016C105.097 21.0261 105.289 21.1195 105.444 21.1713C105.356 21.2543 105.263 21.3633 105.159 21.4981C105.055 21.633 104.962 21.7731 104.874 21.9183C104.786 22.0635 104.713 22.1828 104.662 22.2866C104.542 22.2192 104.392 22.131 104.205 22.022C104.024 21.9079 103.827 21.7886 103.625 21.6537C103.418 21.5189 103.221 21.384 103.024 21.2491C102.827 21.1143 102.651 20.9898 102.5 20.8757V24.486H101.262L101.256 24.4912Z" fill="#231815"/>
+        </svg>
       </a>
       <div class="header-cta">
         <a href="#contact" class="btn btn-secondary">説明会申し込み</a>
@@ -1489,29 +1501,29 @@
       <p class="hero-subtitle">Knowns流リサーチ実践プログラム<br>マーケティングリサーチ Boot Camp</p>
       <div class="hero-features">
         <div class="hero-feature">
-          <span class="hero-feature-icon">💼</span>
+          <svg class="hero-feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
           実務直結
         </div>
         <div class="hero-feature">
-          <span class="hero-feature-icon">🤖</span>
+          <svg class="hero-feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
           AI活用
         </div>
         <div class="hero-feature">
-          <span class="hero-feature-icon">⚡</span>
+          <svg class="hero-feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           即時分析
         </div>
         <div class="hero-feature">
-          <span class="hero-feature-icon">📊</span>
+          <svg class="hero-feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
           深い理解
         </div>
       </div>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-accent btn-large">
-          <span class="btn-icon">📄</span>
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
           資料請求（無料）
         </a>
         <a href="#contact" class="btn btn-secondary btn-large" style="background: transparent; border-color: white; color: white;">
-          <span class="btn-icon">📅</span>
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
           説明会に申し込む
         </a>
       </div>
@@ -1554,22 +1566,34 @@
       </div>
       <div class="problem-cards">
         <div class="problem-card fade-in">
-          <div class="problem-card-icon">😰</div>
+          <div class="problem-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+          </div>
           <h3 class="problem-card-title">座学中心で実務での使い方がわからない</h3>
           <p class="problem-card-desc">演習・レビュー不足で「使える」に至らない</p>
-          <div class="problem-arrow">↓</div>
+          <div class="problem-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          </div>
         </div>
         <div class="problem-card fade-in">
-          <div class="problem-card-icon">📚</div>
+          <div class="problem-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
           <h3 class="problem-card-title">研修テーマが自社課題と乖離している</h3>
           <p class="problem-card-desc">テーマが抽象的で自分ごと化できない</p>
-          <div class="problem-arrow">↓</div>
+          <div class="problem-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          </div>
         </div>
         <div class="problem-card fade-in">
-          <div class="problem-card-icon">📉</div>
+          <div class="problem-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+          </div>
           <h3 class="problem-card-title">受講後の定着支援が弱い</h3>
           <p class="problem-card-desc">振り返りとフォローがなく、現場に根づかない</p>
-          <div class="problem-arrow">↓</div>
+          <div class="problem-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          </div>
         </div>
       </div>
     </div>
@@ -1585,25 +1609,33 @@
       <div class="solution-grid">
         <div class="solution-card fade-in">
           <span class="solution-card-number">01</span>
-          <div class="solution-card-icon">💼</div>
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+          </div>
           <h3 class="solution-card-title">実務直結</h3>
           <p class="solution-card-desc">自社課題を教材化し、提出→レビューを循環。単なる座学ではなく、即時実践可能な知識を提供します。</p>
         </div>
         <div class="solution-card fade-in">
           <span class="solution-card-number">02</span>
-          <div class="solution-card-icon">⚡</div>
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
           <h3 class="solution-card-title">即時分析</h3>
           <p class="solution-card-desc">共通データでその場で分析・解釈を実践。事前調査を待つ必要がありません。</p>
         </div>
         <div class="solution-card fade-in">
           <span class="solution-card-number">03</span>
-          <div class="solution-card-icon">🤖</div>
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          </div>
           <h3 class="solution-card-title">AI活用</h3>
           <p class="solution-card-desc">最新のAIリサーチ手法とトレンド解説。即日使えるプロンプト集の提供も行います。</p>
         </div>
         <div class="solution-card fade-in">
           <span class="solution-card-number">04</span>
-          <div class="solution-card-icon">📊</div>
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
           <h3 class="solution-card-title">深い理解</h3>
           <p class="solution-card-desc">単なるAIツール使用ではなく、分析の背景と手法の理解。データの本質的な解釈スキル習得を目指します。</p>
         </div>
@@ -1662,19 +1694,25 @@
       </div>
       <div class="reasons-grid">
         <div class="reason-card fade-in">
-          <div class="reason-card-icon">👨‍🏫</div>
+          <div class="reason-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+          </div>
           <div class="reason-card-number">REASON 01</div>
           <h3 class="reason-card-title">実績豊富なプロ講師</h3>
           <p class="reason-card-desc">リサーチ・マーケティング領域の専門家がサポートします。</p>
         </div>
         <div class="reason-card fade-in">
-          <div class="reason-card-icon">🎯</div>
+          <div class="reason-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
           <div class="reason-card-number">REASON 02</div>
           <h3 class="reason-card-title">貴社だけのオーダーメイド</h3>
           <p class="reason-card-desc">業界・事業課題を反映して設計。成果物をすぐ業務に活かせます。</p>
         </div>
         <div class="reason-card fade-in">
-          <div class="reason-card-icon">🤝</div>
+          <div class="reason-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+          </div>
           <div class="reason-card-number">REASON 03</div>
           <h3 class="reason-card-title">充実の伴走サポート</h3>
           <p class="reason-card-desc">毎回の課題提出・フィードバックを通じ、受講後も定着を目指します。</p>
@@ -1735,35 +1773,51 @@
       </div>
       <div class="curriculum-list">
         <div class="curriculum-item fade-in">
-          <div class="curriculum-item-check">✓</div>
+          <div class="curriculum-item-check">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
           <span class="curriculum-item-text">消費者リサーチ基礎</span>
         </div>
         <div class="curriculum-item fade-in">
-          <div class="curriculum-item-check">✓</div>
+          <div class="curriculum-item-check">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
           <span class="curriculum-item-text">調査設計の型と進め方</span>
         </div>
         <div class="curriculum-item fade-in">
-          <div class="curriculum-item-check">✓</div>
+          <div class="curriculum-item-check">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
           <span class="curriculum-item-text">Webリサーチの型と進め方</span>
         </div>
         <div class="curriculum-item fade-in">
-          <div class="curriculum-item-check">✓</div>
+          <div class="curriculum-item-check">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
           <span class="curriculum-item-text">定量分析の型と進め方</span>
         </div>
         <div class="curriculum-item fade-in">
-          <div class="curriculum-item-check">✓</div>
+          <div class="curriculum-item-check">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
           <span class="curriculum-item-text">レポートの型と進め方</span>
         </div>
         <div class="curriculum-item fade-in">
-          <div class="curriculum-item-check">✓</div>
+          <div class="curriculum-item-check">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
           <span class="curriculum-item-text">ケースワーク（自社課題持込）</span>
         </div>
         <div class="curriculum-item fade-in">
-          <div class="curriculum-item-check">✓</div>
+          <div class="curriculum-item-check">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
           <span class="curriculum-item-text">企画・提案資料化</span>
         </div>
         <div class="curriculum-item fade-in">
-          <div class="curriculum-item-check">✓</div>
+          <div class="curriculum-item-check">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
           <span class="curriculum-item-text">成果発表＋フィードバック</span>
         </div>
       </div>
@@ -1838,7 +1892,9 @@
             </div>
             <span class="cycle-step-title">共通の基準を学ぶ</span>
           </div>
-          <span class="cycle-arrow">→</span>
+          <span class="cycle-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
           <div class="cycle-step">
             <div class="cycle-step-circle secondary">
               <span class="cycle-step-time">30m</span>
@@ -1846,7 +1902,9 @@
             </div>
             <span class="cycle-step-title">手を動かして形に</span>
           </div>
-          <span class="cycle-arrow">→</span>
+          <span class="cycle-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
           <div class="cycle-step">
             <div class="cycle-step-circle accent">
               <span class="cycle-step-time">30m</span>
@@ -1869,7 +1927,9 @@
       </div>
       <div class="instructors-grid">
         <div class="instructor-card fade-in">
-          <div class="instructor-card-image">👨‍💼</div>
+          <div class="instructor-card-image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          </div>
           <div class="instructor-card-content">
             <h3 class="instructor-card-name">清水</h3>
             <p class="instructor-card-role">マーケティングリサーチ / 定量設計・分析</p>
@@ -1877,7 +1937,9 @@
           </div>
         </div>
         <div class="instructor-card fade-in">
-          <div class="instructor-card-image">👨‍💼</div>
+          <div class="instructor-card-image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          </div>
           <div class="instructor-card-content">
             <h3 class="instructor-card-name">寺門</h3>
             <p class="instructor-card-role">全体戦略 / 定性・デスクリ / 企画化</p>
@@ -1885,7 +1947,9 @@
           </div>
         </div>
         <div class="instructor-card fade-in">
-          <div class="instructor-card-image">👨‍💼</div>
+          <div class="instructor-card-image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          </div>
           <div class="instructor-card-content">
             <h3 class="instructor-card-name">金</h3>
             <p class="instructor-card-role">データ活用 / 分析・レポーティング</p>
@@ -1948,7 +2012,7 @@
         </table>
       </div>
       <div class="subsidy-note">
-        <p class="subsidy-note-title">⚠️ 重要</p>
+        <p class="subsidy-note-title"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> 重要</p>
         <p>計画届は訓練開始の<strong>1か月前まで</strong>に提出が必要です。最終判断は所轄ハローワークが行います。<br>助成金申請は提携のAI行政書士法人がサポートいたします。</p>
       </div>
     </div>
@@ -2051,7 +2115,9 @@
         <div class="faq-item">
           <button class="faq-question">
             研修の最低人数は何名からですか？
-            <span class="faq-icon">+</span>
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
@@ -2062,7 +2128,9 @@
         <div class="faq-item">
           <button class="faq-question">
             オンラインでの受講は可能ですか？
-            <span class="faq-icon">+</span>
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
@@ -2073,7 +2141,9 @@
         <div class="faq-item">
           <button class="faq-question">
             助成金申請のサポートはありますか？
-            <span class="faq-icon">+</span>
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
@@ -2084,7 +2154,9 @@
         <div class="faq-item">
           <button class="faq-question">
             研修後のサポートはありますか？
-            <span class="faq-icon">+</span>
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
@@ -2095,7 +2167,9 @@
         <div class="faq-item">
           <button class="faq-question">
             自社の課題に合わせたカスタマイズは可能ですか？
-            <span class="faq-icon">+</span>
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
@@ -2119,11 +2193,11 @@
       </p>
       <div class="cta-buttons">
         <a href="https://share.hsforms.com/example" class="btn btn-primary btn-large">
-          <span class="btn-icon">📄</span>
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
           資料請求（無料）
         </a>
         <a href="https://share.hsforms.com/example" class="btn btn-accent btn-large">
-          <span class="btn-icon">📅</span>
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
           説明会に申し込む
         </a>
       </div>
@@ -2135,8 +2209,21 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">
-          <div class="logo-icon">K</div>
-          <span>Knowns</span>
+          <svg width="114" height="26" viewBox="0 0 114 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.7491 18.4688C18.7384 17.4573 17.1058 17.4573 16.0951 18.4688L10.2747 24.2941C9.26402 25.3056 7.63139 25.3056 6.62071 24.2941L1.45332 19.1224C0.442644 18.1109 0.442644 16.4769 1.45332 15.4654L16.0951 0.811371C17.1058 -0.200144 18.7384 -0.200144 19.7491 0.811371L27.8189 8.88794C29.7522 10.8228 32.8827 10.8228 34.8159 8.88794L38.9986 4.70181C40.0092 3.6903 41.6419 3.6903 42.6525 4.70181L47.8199 9.87351C48.8306 10.885 48.8306 12.519 47.8199 13.5305L42.891 18.4636C36.5004 24.8595 26.1397 24.8595 19.7491 18.4636V18.4688Z" fill="#3C96AA"/>
+            <path d="M59.6321 0.287109H61.8556V4.71186L65.9294 0.287109H68.6608L64.53 4.58217L68.8319 10.4075H66.1575L63.0218 6.10204L61.8505 7.31585V10.4075H59.627V0.287109H59.6321Z" fill="#231815"/>
+            <path d="M69.4067 2.65794H71.6043V3.75763C72.1122 3.10923 72.7601 2.5127 73.8744 2.5127C75.533 2.5127 76.5022 3.6124 76.5022 5.39163V10.4077H74.3046V6.08672C74.3046 5.04408 73.8122 4.50979 72.9778 4.50979C72.1433 4.50979 71.6043 5.04408 71.6043 6.08672V10.4077H69.4067V2.65794Z" fill="#231815"/>
+            <path d="M77.7412 6.57462V6.5435C77.7412 4.31816 79.5345 2.50781 81.9446 2.50781C84.3546 2.50781 86.1168 4.28703 86.1168 6.51236V6.5435C86.1168 8.76883 84.3235 10.5792 81.9135 10.5792C79.5034 10.5792 77.7412 8.79995 77.7412 6.57462ZM83.9504 6.57462V6.5435C83.9504 5.4023 83.1263 4.40633 81.9135 4.40633C80.7007 4.40633 79.9077 5.37636 79.9077 6.51755V6.54868C79.9077 7.68987 80.7318 8.68582 81.9446 8.68582C83.1574 8.68582 83.9504 7.71582 83.9504 6.57462Z" fill="#231815"/>
+            <path d="M86.5316 2.65777H88.755L89.9989 7.35742L91.4554 2.63184H93.3471L94.8191 7.37298L96.0889 2.65777H98.2709L95.8609 10.4646H93.881L92.3935 5.70788L90.8749 10.4646H88.9105L86.5264 2.65777H86.5316Z" fill="#231815"/>
+            <path d="M99.3179 2.65794H101.515V3.75763C102.023 3.10923 102.671 2.5127 103.786 2.5127C105.444 2.5127 106.413 3.6124 106.413 5.39163V10.4077H104.216V6.08672C104.216 5.04408 103.723 4.50979 102.889 4.50979C102.054 4.50979 101.515 5.04408 101.515 6.08672V10.4077H99.3179V2.65794Z" fill="#231815"/>
+            <path d="M107.419 9.38039L108.357 7.93314C109.197 8.54005 110.078 8.85647 110.798 8.85647C111.436 8.85647 111.721 8.62304 111.721 8.28068V8.24956C111.721 7.77233 110.969 7.61153 110.119 7.35217C109.036 7.03575 107.807 6.52739 107.807 5.02308V4.99196C107.807 3.41503 109.077 2.5332 110.637 2.5332C111.622 2.5332 112.69 2.86519 113.524 3.4306L112.685 4.95047C111.918 4.50436 111.156 4.22943 110.591 4.22943C110.026 4.22943 109.782 4.46286 109.782 4.76372V4.79484C109.782 5.23057 110.518 5.43287 111.358 5.71817C112.441 6.08128 113.695 6.60002 113.695 8.01614V8.04726C113.695 9.76943 112.41 10.5475 110.736 10.5475C109.653 10.5475 108.44 10.1844 107.414 9.3752L107.419 9.38039Z" fill="#231815"/>
+            <path d="M60.0986 23.1271V21.8614C60.3319 21.8822 60.6843 21.8977 61.1508 21.9029C61.6172 21.9081 62.1925 21.9133 62.8663 21.9133V19.9785C62.5761 19.9785 62.3014 19.9785 62.0319 19.9888C61.7675 19.994 61.5343 19.9992 61.3373 20.0044C61.1404 20.0096 60.9901 20.02 60.8916 20.0303V18.7646C61.1041 18.7854 61.4306 18.801 61.8712 18.8061C62.3117 18.8061 62.8611 18.8165 63.5246 18.8165C64.188 18.8165 64.6959 18.8165 65.1364 18.8061C65.577 18.7958 65.8932 18.7854 66.0901 18.7698V20.0355C65.9346 20.02 65.7014 20.0096 65.3749 20.0044C65.0483 19.9992 64.6389 19.994 64.1361 19.9888V21.9237C64.7788 21.9185 65.3334 21.9133 65.7999 21.9029C66.2663 21.8926 66.5877 21.8874 66.7691 21.877V23.1427C66.3026 23.1116 65.2038 23.096 63.4727 23.096C63.1307 23.096 62.7834 23.096 62.431 23.096C62.0785 23.096 61.752 23.1012 61.441 23.1064C61.13 23.1064 60.8553 23.1116 60.6221 23.1167C60.3889 23.1219 60.2127 23.1323 60.0986 23.1427V23.1271Z" fill="#231815"/>
+            <path d="M71.4281 24.5793C71.4229 24.4756 71.4074 24.2992 71.3866 24.0554C71.3659 23.8116 71.34 23.5159 71.3089 23.1788C71.2778 22.8416 71.2415 22.4837 71.2 22.105C70.8217 22.1465 70.4537 22.1932 70.0909 22.2451C69.7281 22.2918 69.4067 22.3385 69.1165 22.38C68.8262 22.4214 68.593 22.4526 68.422 22.4837L68.2769 21.2543C68.4531 21.2387 68.6863 21.218 68.9766 21.1921C69.2668 21.1661 69.5985 21.135 69.9613 21.0987C70.3241 21.0624 70.6973 21.0209 71.0705 20.9742L70.9616 20.0561C70.5418 20.1079 70.1427 20.1546 69.7695 20.2065C69.3964 20.2584 69.1165 20.305 68.9299 20.3413L68.7796 19.112C68.9973 19.1016 69.2927 19.0757 69.6659 19.0445C70.0391 19.0134 70.4278 18.9719 70.832 18.9252C70.8061 18.6659 70.775 18.4376 70.7439 18.2405C70.7128 18.0434 70.6817 17.8722 70.6507 17.7373L71.9516 17.5869C71.9568 17.7062 71.9671 17.867 71.9827 18.0693C71.9982 18.2716 72.0189 18.5102 72.0449 18.7852C72.4543 18.7281 72.8379 18.6762 73.1903 18.6296C73.5427 18.5829 73.8174 18.5414 74.004 18.5154L74.1491 19.7448C74.0455 19.7448 73.89 19.7552 73.6878 19.7708C73.4857 19.7863 73.2473 19.8071 72.9882 19.833C72.7238 19.8589 72.4543 19.8849 72.1692 19.9212L72.2781 20.8497C72.6461 20.803 72.9985 20.7563 73.3458 20.7097C73.693 20.663 74.004 20.6215 74.2787 20.58C74.5586 20.5385 74.7763 20.5073 74.937 20.4762L75.0872 21.716C74.9629 21.7212 74.7607 21.7367 74.4809 21.7627C74.201 21.7886 73.8848 21.8197 73.5272 21.8508C73.1696 21.882 72.7964 21.9235 72.418 21.965C72.4595 22.3333 72.5061 22.6808 72.5476 23.0128C72.5891 23.3448 72.6305 23.6353 72.6668 23.8843C72.7031 24.1332 72.729 24.32 72.7549 24.4445L71.4436 24.5845L71.4281 24.5793Z" fill="#231815"/>
+            <path d="M77 24.1857C76.9016 24.0249 76.7824 23.8485 76.6476 23.6514C76.5128 23.4543 76.3625 23.2883 76.207 23.1586C76.6113 22.9822 77.0156 22.7644 77.4147 22.505C77.8138 22.2456 78.1921 21.9552 78.5601 21.6336C78.9229 21.3119 79.2598 20.9696 79.5656 20.6065C79.8714 20.2434 80.1357 19.8751 80.3534 19.4964C80.0735 19.512 79.7781 19.5327 79.4619 19.5483C79.1458 19.569 78.8348 19.5898 78.5342 19.6105C78.2336 19.6313 77.9641 19.652 77.7205 19.6728C77.4821 19.6935 77.3006 19.7091 77.1814 19.7195L77.0415 18.433C77.1814 18.4382 77.3939 18.4382 77.679 18.433C77.9641 18.4278 78.275 18.4174 78.6171 18.4019C78.9592 18.3863 79.3064 18.3708 79.6485 18.3552C79.9906 18.3345 80.3016 18.3137 80.5814 18.2878C80.8613 18.2618 81.0686 18.2359 81.2034 18.21L82.0223 18.7442C81.8876 19.1333 81.7165 19.512 81.5195 19.8803C81.3226 20.2486 81.0946 20.6065 80.8458 20.9488C81.0427 21.0993 81.25 21.2704 81.4625 21.4572C81.675 21.6439 81.8876 21.8358 82.0949 22.0278C82.3022 22.2197 82.494 22.4065 82.6702 22.588C82.8464 22.7644 82.9863 22.9252 83.0952 23.06C82.9086 23.1794 82.7324 23.3194 82.5561 23.4802C82.3851 23.641 82.2193 23.807 82.0586 23.9782C81.9187 23.7759 81.7321 23.5476 81.504 23.2935C81.276 23.0393 81.0375 22.7851 80.7888 22.5309C80.5348 22.2768 80.3016 22.0537 80.0735 21.8618C79.6174 22.3442 79.1302 22.7799 78.6015 23.1793C78.0729 23.5788 77.5443 23.9108 77.0052 24.1857H77Z" fill="#231815"/>
+            <path d="M84.614 23.1686C84.4844 23.0182 84.3237 22.8678 84.1371 22.7018C83.9505 22.5358 83.7536 22.3957 83.5566 22.2764C83.9298 22.0171 84.2615 21.7162 84.5621 21.3635C84.8575 21.0107 85.1115 20.6424 85.3188 20.2534C85.5261 19.8643 85.6661 19.4909 85.7386 19.1278L86.9618 19.5324C86.853 19.9785 86.6871 20.4297 86.4695 20.8759C86.2518 21.322 85.9874 21.7421 85.6764 22.1364C85.3655 22.5306 85.013 22.8781 84.6191 23.179L84.614 23.1686ZM89.9472 22.9456C89.8487 22.6862 89.7243 22.4113 89.5688 22.1104C89.4134 21.8096 89.2475 21.5139 89.0713 21.2182C88.8951 20.9225 88.7033 20.6528 88.5115 20.4038C88.3198 20.1548 88.1383 19.9525 87.9725 19.7917L88.9728 19.1122C89.1697 19.2937 89.3719 19.5064 89.5896 19.7502C89.8072 19.994 90.0094 20.2586 90.2115 20.5439C90.4137 20.8292 90.6003 21.1145 90.7713 21.405C90.9423 21.6955 91.0874 21.9756 91.2118 22.2453C91.0252 22.3335 90.8231 22.4372 90.5951 22.5513C90.3722 22.6707 90.1545 22.8003 89.9472 22.9404V22.9456ZM90.082 19.1381C89.8539 19.1381 89.6569 19.0551 89.4963 18.8943C89.3356 18.7335 89.2527 18.5364 89.2527 18.3082C89.2527 18.0799 89.3356 17.8932 89.4963 17.7272C89.6569 17.5664 89.8539 17.4834 90.082 17.4834C90.31 17.4834 90.4966 17.5664 90.6624 17.7272C90.8231 17.888 90.9061 18.0799 90.9061 18.3082C90.9061 18.5364 90.8231 18.7335 90.6624 18.8943C90.5018 19.0551 90.31 19.1381 90.082 19.1381ZM90.082 18.7439C90.2012 18.7439 90.3048 18.7024 90.3826 18.6142C90.4655 18.5312 90.507 18.4275 90.507 18.3082C90.507 18.1889 90.4655 18.0851 90.3826 18.0073C90.2996 17.9243 90.2012 17.8828 90.082 17.8828C89.9627 17.8828 89.8591 17.9243 89.7762 18.0073C89.6932 18.0903 89.6466 18.1889 89.6466 18.3082C89.6466 18.4275 89.6881 18.5312 89.7762 18.6142C89.8591 18.6972 89.9627 18.7439 90.082 18.7439Z" fill="#231815"/>
+            <path d="M92.4039 21.7157C92.4039 21.6171 92.4091 21.4874 92.4039 21.3318C92.4039 21.171 92.4039 21.0154 92.4039 20.8546C92.4039 20.6938 92.4039 20.5693 92.3936 20.4707C92.4713 20.4759 92.6371 20.4811 92.8911 20.4915C93.1502 20.5018 93.4612 20.507 93.8344 20.507C94.2076 20.507 94.6118 20.5122 95.042 20.5174C95.4774 20.5174 95.9128 20.5174 96.3481 20.5174C96.7835 20.5174 97.1981 20.5174 97.5817 20.5174C97.9652 20.5174 98.2969 20.507 98.5716 20.5018C98.8463 20.4966 99.0329 20.4863 99.1314 20.4707C99.1262 20.5589 99.121 20.6834 99.121 20.8442C99.121 21.005 99.121 21.1658 99.121 21.3266C99.121 21.4874 99.121 21.6119 99.121 21.7053C98.9966 21.7001 98.7997 21.6949 98.5405 21.6845C98.2762 21.6741 97.9704 21.669 97.6128 21.6638C97.2552 21.6586 96.8768 21.6534 96.4725 21.6534H95.2494C94.8399 21.6534 94.446 21.6534 94.0728 21.6638C93.6997 21.669 93.368 21.6741 93.0777 21.6845C92.7875 21.6949 92.5594 21.7053 92.3987 21.7208L92.4039 21.7157Z" fill="#231815"/>
+            <path d="M101.256 24.4912V17.7529H102.495V20.2532L102.889 19.6878C103.019 19.7812 103.195 19.9005 103.418 20.0457C103.64 20.1909 103.879 20.3362 104.133 20.4866C104.387 20.637 104.63 20.7771 104.864 20.9016C105.097 21.0261 105.289 21.1195 105.444 21.1713C105.356 21.2543 105.263 21.3633 105.159 21.4981C105.055 21.633 104.962 21.7731 104.874 21.9183C104.786 22.0635 104.713 22.1828 104.662 22.2866C104.542 22.2192 104.392 22.131 104.205 22.022C104.024 21.9079 103.827 21.7886 103.625 21.6537C103.418 21.5189 103.221 21.384 103.024 21.2491C102.827 21.1143 102.651 20.9898 102.5 20.8757V24.486H101.262L101.256 24.4912Z" fill="#231815"/>
+          </svg>
         </div>
         <p class="footer-desc">
           消費者リサーチを素早く、気軽に、なめらかに。<br>
@@ -2167,8 +2254,8 @@
 
   <!-- Mobile CTA Bar -->
   <div class="mobile-cta-bar">
-    <a href="#contact" class="btn btn-secondary">説明会申込</a>
-    <a href="#contact" class="btn btn-accent">資料請求</a>
+    <a href="#contact" class="btn btn-secondary"><svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>説明会申込</a>
+    <a href="#contact" class="btn btn-accent"><svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>資料請求</a>
   </div>
 
   <script>
@@ -2232,6 +2319,9 @@
         }
       });
     });
+
+    // Initialize Lucide icons
+    lucide.createIcons();
   </script>
 </body>
 </html>
